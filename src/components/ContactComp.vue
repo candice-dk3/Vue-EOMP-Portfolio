@@ -1,17 +1,16 @@
 <template>
   <section>
-    <div>
       <div class="imgContact">
-    <img :src="imageUrl" alt=""/>
-  </div>
-    </div>
+        <img :src="imgUrlContact" alt=""/>
+
+      </div>
   </section>
 </template>
 <script>
 export default {
     data(){
     return{
-      imageUrl: 'https://github.com/candice-dk3/vueProjectImages/blob/main/About-Page.png?raw=true',
+      imgUrlContact: 'https://github.com/candice-dk3/vueProjectImages/blob/main/Contact-Page.png?raw=true',
     }
   }
 }
