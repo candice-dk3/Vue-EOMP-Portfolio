@@ -1,7 +1,7 @@
 <template>
   <section>
     <div>
-      <div class="imgAbout">
+      <div class="imgContact">
     <img :src="imageUrl" alt=""/>
   </div>
     </div>
@@ -9,7 +9,7 @@
 </template>
 <script>
 export default {
-  data(){
+    data(){
     return{
       imageUrl: 'https://github.com/candice-dk3/vueProjectImages/blob/main/About-Page.png?raw=true',
     }
@@ -17,5 +17,5 @@ export default {
 }
 </script>
 <style>
-  
+    
 </style>
