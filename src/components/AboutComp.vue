@@ -12,33 +12,31 @@
                       </div>
                         <div class="about-detail-div">
                             <h6 class="heading-p">
-                            <h5>Full Name:</h5>
+                            <h4>Full Name:</h4>
                             </h6>
-                            <p class="body-p">Candice Danelle Keet</p>
+                            <p class="body-p"></p>
 
                             <h6 class="heading-p">
-                            <h5>Date of Birth:</h5>
+                            <h4>Date of Birth:</h4>
                             </h6>
-                            <p class="body-p">03 October 2005</p>
+                            <p class="body-p"></p>
 
                             <h6 class="heading-p">
-                            <h5>Email:</h5>
+                            <h4>Email:</h4>
                             </h6>
-                            <p class="body-p">candicekeet3@gmail.com</p>
+                            <p class="body-p"></p>
 
                             <h6 class="heading-p">
-                            <h5>Address:</h5>
+                            <h4>Address:</h4>
                             </h6>
-                            <p class="body-p">Bontehuewel, Cape Town</p>
+                            <p class="body-p"></p>
                         </div>
                     </div>
                     <div class="col-2"></div>
                     <div class="col-5" id="about-me">
                       <div class="about-me-div">
                         <h1 class="about-me-h1">About me</h1>
-                        <p class="about-dc">
-                          
-                          </p>
+                        <p class="about-dc"></p>
                           </div>
                         <div class="col-1"></div>
                     </div>
@@ -58,6 +56,14 @@ export default {
       imgUrlAbout: 'https://github.com/candice-dk3/vueProjectImages/blob/main/About-Page.png?raw=true',
     }
   }
+  //   computed: {
+  //   aboutMe() {
+  //     return this.$store.state.aboutMe
+  //   }
+  // },
+  // mounted() {
+  //   this.$store.dispatch('getAboutMe')
+  // }
 }
 </script>
 <style>
@@ -79,7 +85,7 @@ img{
   object-fit: cover;
 }
 
-h5, .body-p{
+h4, .body-p{
   text-indent: 10%;
 }
 .about-h1{
@@ -100,28 +106,31 @@ h5, .body-p{
 
 .about-detail-div {
   color: white;
-  font-size: 19px; 
-  margin-top: 30px;
+  font-size: 24px; 
+  margin-top: 80px;
   top: 150%;
 }
 
 .about-dc{
-    color: white;
-    font-size: 19px;
-    margin-top: 30px;
-    margin-left: 50px;
-    margin-right: 50px;
-    top: 150%;
+  color: white;
+  font-size: 19px;
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+  top: 150%;
 }
 #about-dm, #about-me {
   position: absolute;
-  background-color: #fff70034;
+  background-color: #fff70044;
   border-radius: 30px;
   margin-top: 60px;
   height: 550px;
   top: 180%;
 }
 
+.col-5{
+  margin-left: 600px;
+}
 .bottom2{
   position: absolute;
   background: #1A0129;

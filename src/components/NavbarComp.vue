@@ -8,7 +8,7 @@
         </div>
         <nav class="nav justify-content-end">
           <li class="nav-item">
-            <router-link to="/">Home</router-link>
+            <a href=""><router-link to="/">Home</router-link></a>
           </li>
           <li class="nav-item">
             <a href="#About"><router-link to="/about">About</router-link></a>
@@ -49,11 +49,14 @@
   display: flex;
   justify-content: space-between;
 }
+
 .navbar-sect {
   position: fixed;
   margin-top: 70px;
   width: 100%;
+  z-index: 50;
 }
+
 .navbar-logo {
   width: 100px;
   height: 150px;
@@ -61,6 +64,7 @@
   left: 20px;
   top: 5px;
 }
+
 #app {
   font-family: "Inknut Antiqua", serif;
   font-weight: 400;
@@ -79,11 +83,12 @@
 }
 
 nav a {
-  margin-left: 10px;
+  position: relative;
   color: white;
   font-size: 27px;
   text-decoration: none;
   margin-right: 20px;
+  margin-left: 20px;
 }
 
 nav a.router-link-exact-active {
@@ -92,5 +97,24 @@ nav a.router-link-exact-active {
 
 .nav-item{
   margin-top: 20px;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 1.5px;
+  background-color: #FFF500;
+  transition: width 0.5s ease-in-out;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+.navbar-scrolled {
+  background-color: transparent;
 }
 </style>
