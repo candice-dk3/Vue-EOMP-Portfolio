@@ -1,8 +1,7 @@
 <template>
-  <section>
+  <section id="Contact">
       <div class="imgContact">
         <img :src="imgUrlContact" alt=""/>
-
       </div>
   </section>
 </template>

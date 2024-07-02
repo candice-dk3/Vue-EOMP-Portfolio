@@ -1,5 +1,5 @@
 <template>
-    <section class="home-info">
+    <section class="home-info" id="Home">
       <div class="imgHome">
         <img :src="imageUrl" alt="CK Logo"/>
         <div class="pic">
@@ -9,8 +9,7 @@
               <h5 class="name-text-h5">Aspiring Full Stack Developer</h5>
               <div class="hero-name-button">
                 <div class="about-btn">
-                  
-                    <a href="#About"><router-link to="/about">about me</router-link></a>
+                    <router-link to="/about" style="color: white; text-decoration: none" >about me</router-link>                   
                 </div> 
               </div>
             </div>
@@ -22,26 +21,24 @@
   </template>
   
   <script>
-  import HomeComp from '@/components/HomeComp.vue';
   export default {
     data() {
       return {
         imageUrl: 'https://github.com/candice-dk3/vueProjectImages/blob/main/Home-Page.png?raw=true',
-      };
-    },
-    component: {
-      HomeComp
-      },
+      }
+    }
   }
-  </script>
-  <style>
-  body::-webkit-scrollbar {
+</script>
+
+<style>
+*{
+    margin: 0;
+}
+
+body::-webkit-scrollbar {
     display: none;
-  }  
-  body{
-    display: block;
-    margin: 0px;
-  }
+}
+
 .pic{
     border: 10px solid #fff700b7;
     border-radius: 50%;
