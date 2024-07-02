@@ -3,17 +3,17 @@
     <div class="row">
       <div class="col-4 justify-content-space-between">
         <div class="imgGH">
-          <img :src="imgGH" alt=""/>
+          <a href="https://github.com/candice-dk3" target="blank" class="card-github"><img :src="imgGH" alt=""/></a>
         </div>
       </div>
     <div class="col-4 justify-content-space-between">
       <div>
-        <p class="cr-sec">© Candice Keet 2024</p> 
+        <p class="cr-sec">&copy; Candice Keet {{ new Date().getFullYear() }} </p> 
       </div>
     </div>
     <div class="col-4 justify-content-space-between">
       <div class="imgLK">
-        <img :src="imgLK" alt=""/>
+        <a href="https://www.linkedin.com/in/candice-keet-06282a30a/" target="blank" class="card-linkedin"><img :src="imgLK" alt="LinkedIn"/></a>
       </div>
     </div>
     </div>
@@ -22,17 +22,42 @@
 
 <script>
 export default {
-    
+    data() {
+      return{
+        imgGH: 'https://github.com/candice-dk3/vueProjectImages/blob/main/github.png?raw=true',
+        imgLK: 'https://github.com/candice-dk3/vueProjectImages/blob/main/linkedin.png?raw=true'
+      }
+    }
 }
 </script>
 <style>
 #footer{
-  position: relative;
   width: 100%;
   background-color: #1A0129;
   color: white;
   font-size: 20px;
   text-align: center;
-  margin-top: -100px;
+  height: 100px;
+  position: sticky;
 } 
+
+.cr-sec{
+  margin-top: 40px;
+}
+
+.row{
+  width: 100%;
+}
+.imgGH{
+  width: 75px;
+  height: 45px;
+  margin-left: 200px;
+  margin-top: 60px;
+}
+.imgLK{
+  width: 60px;
+  height: 20px;
+  margin-top: 60px;
+  margin-left: 250px;
+}
 </style>
