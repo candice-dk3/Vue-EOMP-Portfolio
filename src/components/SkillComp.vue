@@ -1,50 +1,50 @@
 <template>
-<section id="Skill">
-    <div class="imgSkill">
-        <img :src="imgUrlSkill" alt=""/>
-        <div class="inner-skill-sec">
-            <h1 class="skill-h1">Skill</h1>
-            <div class="row">
-                <div class="col-4">
-                    <div class="html">
-                        <img :src="imgUrlSkillHtml" alt="HTML"/>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="css">
-                        <img :src="imgUrlSkillCss" alt="CSS"/>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="bootstrap">
-                        <img :src="imgUrlSkillBootstrap" alt="Bootstrap"/> 
-                    </div>
-                    
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-4">
-                    <div class="h3-text">
-                        <h3></h3>
-                        <h3></h3>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="h3-text">
-                        <h3></h3>
-                        <h3></h3>
-                    </div>
-                </div>
-                <div class="col-4">
-                    <div class="h3-text">
-                        <h3></h3>
-                        <h3></h3>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+  <section id="Skill">
+      <div class="imgSkill">
+          <img :src="imgUrlSkill" alt=""/>
+          <div class="inner-skill-sec">
+              <h1 class="skill-h1">Skill</h1>
+              <div class="row">
+                  <div class="col-4">
+                      <div class="html">
+                          <img :src="imgUrlSkillHtml" alt="HTML"/>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="css">
+                          <img :src="imgUrlSkillCss" alt="CSS"/>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="bootstrap">
+                          <img :src="imgUrlSkillBootstrap" alt="Bootstrap"/> 
+                      </div>
+                      
+                  </div>
+              </div>
+              <div class="row">
+                  <div class="col-4">
+                      <div class="h3-text">
+                          <h3></h3>
+                          <h3></h3>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="h3-text">
+                          <h3></h3>
+                          <h3></h3>
+                      </div>
+                  </div>
+                  <div class="col-4">
+                      <div class="h3-text">
+                          <h3></h3>
+                          <h3></h3>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </section>
 <div class="bottom4"></div>
 </template>
 
