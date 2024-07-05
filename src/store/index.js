@@ -1,38 +1,43 @@
+
 import { createStore } from 'vuex'
 export default createStore({
   state: {
-    // aboutMe: null,
-    // projects: null,
-    // skills: null,
-    // education: null,
-    // testimonial: null,
+    about: null,
+    projects: null,
+    education: null,
+    skills: null,
+    testimonials: null,
   },
   getters: {
   },
   mutations: {
-    // setAboutMe(state,info){
-    //   state.aboutMe = info
-    // },
-    // setProjects(state,info){
-    //   state.projects = info
-    // },
-    // setSkills(state,info){
-    //   state.skills = info
-    // },
-    // setEducation(state,info){
-    //   state.education = info
-    // },
-    // setTestimonials(state,info){
-    //   state.testimonial = info
-    // }
+    setAbout(state,payload){
+      state.about = payload
+    },
+    setProjects(state,payload){
+      state.projects = payload
+    },
+    setEducation(state,payload){
+      state.education = payload
+    },
+    setSkills(state,payload){
+      state.skills = payload
+    },
+    setTestimonials(state,payload){
+      state.testimonials = payload
+    }
   },
   actions: {
-    // async getAboutMe(context){
-    //   let fetchedData = await fetch('https://candice-dk3.github.io/api/data/data.json');
-    //   let about = await fetchedData.json();
-    //   let {aboutMe} =about
-    //   context.commit('setAboutMe',aboutMe)
-    // }
+    async getData({commit}){
+      let fetchedData = await fetch('https://candice-dk3.github.io/api/data/data.json')
+      let data = await fetchedData.json()
+      let {about, projects, education,skills, testimonials} = data
+      commit('setAbout', about)
+      commit('setProjects', projects)
+      commit('setEducation', education)
+      commit('setSkills', skills)
+      commit('setTestimonials', testimonials)
+    }
   },
   modules: {
   }
