@@ -1,15 +1,16 @@
 <template>
-    <section class="home-info" id="Home">
+    <section class="home-info" id="home">
       <div class="imgHome">
         <img :src="imageUrl" alt="CK Logo"/>
         <div class="pic">
+          <img :src="myPicture" alt="CK" class="mypicture"/>
           <section class="hero-name-section">
             <div class="hero-name-div">
               <h3 class="name-text-h3">Candice Keet</h3>
               <h5 class="name-text-h5">Aspiring Full Stack Developer</h5>
               <div class="hero-name-button">
                 <div class="about-btn">
-                    <router-link to="/about" style="color: white; text-decoration: none" >about me</router-link>                   
+                  <a href="#about" style="color: white; text-decoration: none">about me</a>
                 </div> 
               </div>
             </div>
@@ -25,6 +26,7 @@
     data() {
       return {
         imageUrl: 'https://github.com/candice-dk3/vueProjectImages/blob/main/Home-Page.png?raw=true',
+        myPicture: 'https://github.com/candice-dk3/vueProjectImages/blob/main/20240422_114556.jpg?raw=true'
       }
     }
   }
@@ -32,11 +34,11 @@
 
 <style>
 *{
-    margin: 0;
+   margin: 0;
 }
 
 body::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .pic{
@@ -49,7 +51,18 @@ body::-webkit-scrollbar {
     top: 40%;
     margin-left: 300px;
 }
-  
+
+.mypicture{
+  border-radius: 950px;
+  width: 364px;
+  height: 360px;
+  margin-top: 1px;
+  margin-left: 2px;
+}
+
+.hero-name-section{
+  margin-top: -360px;
+}
 .name-text-h3{
     color: white;
     font-size: 50px;
@@ -111,7 +124,7 @@ img{
     width: 100%;
     height: 80px;
     bottom: 50%;
-    top: 140%
+    top: 144%
 }
   
   </style>

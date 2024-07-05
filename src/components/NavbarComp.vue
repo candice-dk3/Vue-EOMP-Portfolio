@@ -2,31 +2,31 @@
   <nav class="navbar">
       <nav class="navbar-sect">
         <div class="container">
-          <router-link to="/">
+          <a href="#home">
            <img :src="logoUrl" alt="My Logo" class="navbar-logo"/> 
-          </router-link>
+          </a>
         </div>
         <nav class="nav justify-content-end">
           <li class="nav-item">
-            <a href=""><router-link to="/">Home</router-link></a>
+            <a href="#home">Home</a>
           </li>
           <li class="nav-item">
-            <a href="#About"><router-link to="/about">About</router-link></a>
+            <a href="#about">About</a>
           </li>
           <li class="nav-item">
-            <a href="#Project"><router-link to="/project">Project</router-link></a>
+            <a href="#project">Project</a>
           </li>
           <li class="nav-item">
-            <a href="#Skill"><router-link to="/skill">Skill</router-link></a> 
+            <a href="#skill">Skill</a> 
           </li>
           <li class="nav-item">
-            <a href="#Resume"><router-link to="/resume">Resume</router-link></a>
+            <a href="#resume">Resume</a>
           </li>
           <li class="nav-item">
-            <a href="#Testimonial"><router-link to="/testimonial">Testimonial</router-link></a>
+            <a href="#testimonial">Testimonial</a>
           </li>
           <li class="nav-item">
-            <a href="#Contact"><router-link to="/contact">Contact</router-link></a>
+            <a href="#contact">Contact</a>
           </li>
         </nav>
       </nav>
@@ -91,7 +91,7 @@ nav a {
   margin-left: 20px;
 }
 
-nav a.router-link-exact-active {
+nav a:focus {
   color: #FFF500;
 }
 

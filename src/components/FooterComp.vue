@@ -1,22 +1,24 @@
 <template>
     <footer id="footer">
-    <div class="row">
-      <div class="col-4 justify-content-space-between">
-        <div class="imgGH">
-          <a href="https://github.com/candice-dk3" target="blank" class="card-github"><img :src="imgGH" alt=""/></a>
+      <div class="footer-row">
+        <div class="row">
+          <div class="col-4 justify-content-space-between" style="padding: 0px;">
+            <div class="imgGH">
+              <a href="https://github.com/candice-dk3" target="blank" class="card-github"><img :src="imgGH" alt=""/></a>
+            </div>
+          </div>
+        <div class="col-4 justify-content-space-between" style="padding: 0px;">
+          <div>
+            <p class="cr-sec">&copy; Candice Keet {{ new Date().getFullYear() }} </p> 
+          </div>
+        </div>
+        <div class="col-4 justify-content-space-between" style="padding: 0px;">
+          <div class="imgLK">
+            <a href="https://www.linkedin.com/in/candice-keet-06282a30a/" target="blank" class="card-linkedin"><img :src="imgLK" alt="LinkedIn"/></a>
+          </div>
+        </div>
         </div>
       </div>
-    <div class="col-4 justify-content-space-between">
-      <div>
-        <p class="cr-sec">&copy; Candice Keet {{ new Date().getFullYear() }} </p> 
-      </div>
-    </div>
-    <div class="col-4 justify-content-space-between">
-      <div class="imgLK">
-        <a href="https://www.linkedin.com/in/candice-keet-06282a30a/" target="blank" class="card-linkedin"><img :src="imgLK" alt="LinkedIn"/></a>
-      </div>
-    </div>
-    </div>
   </footer>
 </template>
 
@@ -39,12 +41,17 @@ export default {
   text-align: center;
   height: 100px;
   position: sticky;
+  padding: 0px;
 } 
 
 .cr-sec{
   margin-top: 40px;
 }
 
+.footer-row{
+  width: 100%;
+  margin-top: -40px;
+}
 .row{
   width: 100%;
 }
