@@ -1,8 +1,8 @@
 <template>
   <NavbarComp/>
   <div v-if="isLoading" class="spinner-container">
-      <Spinner :isLoading="isLoading"></Spinner>
-    </div>
+    <Spinner :isLoading="isLoading"></Spinner>
+  </div>
   <home-comp/>
   <about-comp/>
   <project-comp/>
@@ -16,7 +16,6 @@
 </template>
 
 <script>
-// /*eslint-disable*/
 import NavbarComp from './components/NavbarComp.vue';
 import FooterComp from './components/FooterComp.vue';
 import SpinnerComp from './components/SpinnerComp.vue';

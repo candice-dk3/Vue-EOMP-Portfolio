@@ -1,50 +1,23 @@
 <template>
-  <section id="Skill">
-      <div class="imgSkill">
-          <img :src="imgUrlSkill" alt=""/>
-          <div class="inner-skill-sec">
-              <h1 class="skill-h1">Skill</h1>
-              <div class="row">
-                  <div class="col-4">
-                      <div class="html">
-                          <img :src="imgUrlSkillHtml" alt="HTML"/>
-                      </div>
-                  </div>
-                  <div class="col-4">
-                      <div class="css">
-                          <img :src="imgUrlSkillCss" alt="CSS"/>
-                      </div>
-                  </div>
-                  <div class="col-4">
-                      <div class="bootstrap">
-                          <img :src="imgUrlSkillBootstrap" alt="Bootstrap"/> 
-                      </div>
-                      
-                  </div>
-              </div>
-              <div class="row">
-                  <div class="col-4">
-                      <div class="h3-text">
-                          <h3></h3>
-                          <h3></h3>
-                      </div>
-                  </div>
-                  <div class="col-4">
-                      <div class="h3-text">
-                          <h3></h3>
-                          <h3></h3>
-                      </div>
-                  </div>
-                  <div class="col-4">
-                      <div class="h3-text">
-                          <h3></h3>
-                          <h3></h3>
-                      </div>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </section>
+<section id="skill">
+    <div class="imgSkill">
+        <img :src="imgUrlSkill" alt=""/>
+        <div class="inner-skill-sec">
+            <h1 class="skills-h1">Skills</h1>
+            <div v-for="skill in $store.state.skills" :key="skill.id" class="skill">
+                <div class="skill-card">
+                  <div class="imgUrl">
+                        <img :src="skill.image" alt="" class="skill-image"/>
+                    </div>
+                    <div class="skill-card-body">
+                        <h5 class="skill-card-title">{{ skill.name }}</h5>
+                        <p class="skill-card-p">{{ skill.level }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <div class="bottom4"></div>
 </template>
 
@@ -53,57 +26,108 @@ export default {
     data(){
         return{
             imgUrlSkill: 'https://github.com/candice-dk3/vueProjectImages/blob/main/Skills-Page.png?raw=true',
-            imgUrlSkillHtml: 'https://github.com/candice-dk3/vueProjectImages/blob/main/html.png?raw=true',
-            imgUrlSkillCss: 'https://github.com/candice-dk3/vueProjectImages/blob/main/css.png?raw=true',
-            imgUrlSkillBootstrap: 'https://github.com/candice-dk3/vueProjectImages/blob/main/bootstrap.png?raw=true',
-
         }
-    }
+    },
+    methods: {
+      getSkills() {
+        return this.$store.state.skills;
+      },
+      getData() {
+        return this.$store.dispatch("getData");
+      },
+    },
+    mounted() {
+      this.getData();
+    },
 }
 </script>
 
 <style>
-.inner-skill-sec{
-    position: absolute;
-    top: 449%;
-    width: 100%;
+.imgSkill{
+  margin-top: 110px;
+  top: 489%;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  background-size: cover;
+  background-position: center;
+}
+.inner-skill-sec {
+  position: absolute;
+  top: 485%;
+  width: 100%;
+  text-align: center;
 }
 
-.skill-h1{
-    color: white;
-    margin-left: 650px;
+.imgUrl{
+  margin: auto;
+  position: relative;
+  bottom: 16px;
+  left: 40px;
 }
 
-
-.html{
-    width: 150px;
-    height: 100px;
-    position: absolute;
-    top: 315%;
-    left: 10%;
-    background-color: #3c025d;
-    border-radius: 50px;
+.skills-h1 {
+  color: white;
+  text-align: center;
+  margin-bottom: 80px;
+  margin-top: 30px;
 }
 
-.css{
-    width: 190px;
-    height: 100px;
-    position: absolute;
-    top: 300%;
+.skill {
+  display: inline-block; 
+  margin: 40px;
+  width: 200px;
+  height: 200px;
+  border-radius: 30px;
 }
 
-.bootstrap{
-    width: 200px;
-    height: 100px;
-    position: absolute;
-    top: 310%;
+.skill-card {
+  width: 200px;
+  height: 200px;
+  background-color: rgb(255, 245, 0, 12%);
+  border: 2px solid #FFF500;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.bottom4{
-    position: absolute;
-    background: #1A0129;
-    width: 100%;
-    height: 80px;
-    bottom: 50%;
-    top: 568%
+
+.skill-card-body{
+  position: relative;
+  top: 150%;
+  color: white;
+  background-color: rgb(255, 245, 0, 12%);
+  height: 140px;
+  width: 200px;
+  border-radius: 20px;
+}
+
+.skill-card-title{
+  margin-top: 25px;
+  color: white;
+  margin-bottom: 20px;
+  
+}
+.skill-image{
+  position: relative; 
+  filter: grayscale(100%);  
+  transition: filter 0.4s;
+}
+.skill-image:hover {
+  filter: none;
+  filter: none;
+}
+img.skill-image{
+  position: absolute;
+  width: 110px;
+  height: 125px;
+}
+.bottom4 {
+  position: absolute;
+  background: #1A0129;
+  width: 100%;
+  height: 80px;
+  bottom: 50%;
+  top: 622%
 }
 </style>
